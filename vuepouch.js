@@ -61,7 +61,10 @@ function bind(vm, key, source) {
    
     return new Promise(function (resolve, reject) {
       localDB.remove(id, rev).then(function (doc) {
-        Vue.delete(vm[key], id)
+        // check for connection
+        remoteDB.info().catch(function(err){
+          Vue.delete(vm[key], id)
+        })
         resolve(doc)
       }).catch(function (err) {
         reject(err)
