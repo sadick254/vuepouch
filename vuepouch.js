@@ -77,18 +77,22 @@ function bind(vm, key, source) {
     retry: true
   }).on('change', function (change) {
     var docs = change.change.docs
-    console.log("change")
+    // TODO: Refactor docs check
     docs.forEach(function (doc) {
       var uuid = doc['_id']
       if ((uuid in vm[key])) {
         if (doc['_deleted']) {
           Vue.delete(vm[key], uuid)
-          return
+        } else {
+          vm[key][uuid] = doc
         }
-        vm[key][uuid] = doc
       } else {
-        var obj = vm[key]
-        Vue.set(obj, uuid, doc)
+        if (doc['_deleted']) {
+          Vue.delete(vm[key], uuid)
+        } else {
+          var obj = vm[key]
+          Vue.set(obj, uuid, doc)
+        }
       }
     })
   })
@@ -119,5 +123,3 @@ function install(Vue) {
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
-
-module.exports = install
