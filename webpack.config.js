@@ -5,6 +5,8 @@ module.exports = {
   entry: './src/index.js',
   //output
   output: {
+    library: 'vuepouch',
+    libraryTarget: 'umd',
     filename: 'vuepouch.js',
     path: path.resolve(__dirname, 'dist')
   },
