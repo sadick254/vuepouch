@@ -1,6 +1,6 @@
 # Vuepouch
 A tiny library to enable you work with PouchDB in a Vuejs app. It syncs with remote CouchDB too :-)
-
+## Work in progress (not production ready)
 ## Installation
 Installing Vuepouch is as easy as including it in your html script tag. Being that it is a vuejs plugin 
 it has a dependancy on vuejs. So dont forget to include that.

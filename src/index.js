@@ -1,4 +1,7 @@
-export default {
+const VuePouch = {
+  test () {
+    
+  },
   install (Vue, options) {
     Vue.mixin({
       mounted () {
@@ -7,3 +10,4 @@ export default {
     })
   }
 }
+export default VuePouch

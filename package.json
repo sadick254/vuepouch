@@ -1,14 +1,15 @@
 {
   "name": "vuepouch-db",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A tiny vue plugin to make working with pouchdb and vuejs easy",
   "main": "./dist/vuepouch.js",
+  "module": "./src/index.js",
   "repository": "https://github.com/sadick254/vuepouch.git",
   "author": "Sadick <sadickjunior@gmail.com>",
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "build": "webpack"
+    "build": "webpack -p"
   },
   "babel": {
     "presets": [

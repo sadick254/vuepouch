@@ -7,6 +7,7 @@ module.exports = {
   output: {
     library: 'vuepouch',
     libraryTarget: 'umd',
+    umdNamedDefine: true,
     filename: 'vuepouch.js',
     path: path.resolve(__dirname, 'dist')
   },
