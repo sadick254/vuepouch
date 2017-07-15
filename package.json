@@ -1,6 +1,6 @@
 {
   "name": "vuepouch-db",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny vue plugin to make working with pouchdb and vuejs easy",
   "main": "./dist/vuepouch.js",
   "repository": "https://github.com/sadick254/vuepouch.git",
