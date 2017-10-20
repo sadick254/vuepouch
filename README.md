@@ -16,11 +16,11 @@ var app = new Vue({
   el: "#app",
   pouchdb: {
     uber: {
-      localdb: "uber",
+      localDB: "uber",
       remoteURL: "http://127.0.0.1:5984/uber"
     }
   },
-  computed () {
+  computed: {
     drivers () {
       return this.uber.drivers
     },
